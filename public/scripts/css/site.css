@@ -1,6 +1,6 @@
 @media all {
     /** css reset **/
-    *:where(:not(iframe, canvas, img, svg, video, ol):not(svg *)) {    
+    *:where(:not(iframe, canvas, img, svg, video, ol, button):not(svg *)) {    
         all: unset;    
         display: revert;
     }
@@ -19,5 +19,47 @@
     body {
         font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     }
+    
+    /** Site Styles **/
+    body {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100svh;
+        grid-template: 
+        'header header header' auto
+        '. main .' 1fr
+        'footer footer footer' auto;
+    }
+    button {
+        padding: 1rem;
+    }
+    header {
+        grid-area: header;
+        background-color: #f0f0f0;
+        padding: 1rem;
+        text-align: center;
+    }
+    main {
+        grid-area: main;
+        padding: 1rem;
+        text-align: center;
+    }
+    footer {
+        grid-area: footer;
+        background-color: #f0f0f0;
+        padding: 1rem;
 
+    }
+    .logo > img {
+        width: 200px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    section {
+        margin: 1rem;
+    }
+    button {
+        margin: 0.5rem;
+    }
 }
